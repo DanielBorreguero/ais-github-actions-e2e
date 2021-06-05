@@ -27,9 +27,9 @@ jobs:
         uses: actions/setup-java@v1
         with:
             java-version: 11
-        
-      - name: Run test selenium
-        run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.selenium.*Test' test
 
       - name: Build native with Maven
         run: mvn -B package -DskipTests
+
+      - name: Run test selenium
+        run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.selenium.*Test' test
