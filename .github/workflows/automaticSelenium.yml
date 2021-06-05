@@ -30,3 +30,6 @@ jobs:
         
       - name: Run test selenium
         run: mvn -B '-Dtest=es.urjc.code.daw.library.e2e.selenium.*Test' test
+
+      - name: Build native with Maven
+        run: mvn -B package -DskipTests
